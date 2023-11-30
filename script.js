@@ -30,14 +30,7 @@ const gotFunction = function () {
     }
 }
 
-const newGame = function () {
-    const randomIndex = Math.floor((Math.random() * arrayWords.length));
-    randomWord = arrayWords[randomIndex]
-    console.log(randomWord);
-    createGrid(randomWord.length);
-    return randomWord
 
-<<<<<<< HEAD
 const newGame = function () {
     const randomIndex = Math.floor((Math.random() * arrayWords.length));
     randomWord = arrayWords[randomIndex]
@@ -80,30 +73,4 @@ const createGrid = function (length) {
 }
 
 gotItButton.addEventListener("click", gotFunction); // debugging
-=======
-
-}
-
-const createGrid = function (wordLength) {
-    const gridContainer = document.getElementById("grid-container");
-    const numColumns = 10;
-    gridContainer.innerHTML = '';
-
-    let charIndex = 0;
-
-
-    const totalColumns = Math.ceil(wordLength / 5) * 5;
-
-
-    for (let col = 0; col < totalColumns && charIndex < wordLength; col++) {
-        const cell = document.createElement("div");
-        cell.classList.add("grid-cell");
-        cell.textContent = randomWord[charIndex];
-        gridContainer.appendChild(cell);
-        charIndex++;
-    }
-}
-
-gotItButton.addEventListener("click", gotFunction);
->>>>>>> main
 newGameButton.addEventListener("click", newGame);

@@ -56,7 +56,6 @@ body {
     z-index: -1;
 }
 
-<<<<<<< HEAD
 
 /* title*/
 
@@ -87,18 +86,9 @@ body {
     padding: 10px;
     margin-bottom: 5px;
     color: antiquewhite;
-=======
->>>>>>> main
 
-/* title*/
-
-.title {
-    color: #E94057;
-    text-align: center;
-    margin-top: 2em;
 }
 
-<<<<<<< HEAD
 .cell-container {
     display: flex;
     flex-direction: row;
@@ -122,24 +112,6 @@ body {
     margin-bottom: 5px;
     color: antiquewhite;
 }
-=======
-/* griglia */
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    gap: 10px;
-}
-
-.grid-cell {
-    border: 1px solid #ccc;
-    text-align: center;
-    padding: 10px;
-    margin-bottom: 5px;
-
-}
-
->>>>>>> main
 /* Stile per evidenziare la parola */
 .grid-cell.word {
     background-color: lightblue;
