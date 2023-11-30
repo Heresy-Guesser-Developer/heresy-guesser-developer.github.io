@@ -37,6 +37,50 @@ const newGame = function () {
     createGrid(randomWord.length);
     return randomWord
 
+<<<<<<< HEAD
+const newGame = function () {
+    const randomIndex = Math.floor((Math.random() * arrayWords.length));
+    randomWord = arrayWords[randomIndex]
+    console.log(randomWord);
+    createGrid(randomWord.length);
+    return randomWord
+
+
+}
+
+const createGrid = function (length) {
+    const gridContainer = document.getElementById("grid-container");
+    const cellContainer = document.querySelector(".cell-container");
+    const rowContainer0 = document.querySelector(".row-container0");
+    const rowContainer1 = document.querySelector(".row-container1");
+    const rowContainer2 = document.querySelector(".row-container2");
+    const rowContainer3 = document.querySelector(".row-container3");
+    const rowContainer4 = document.querySelector(".row-container4");
+    const rowContainer5 = document.querySelector(".row-container5");
+    const rowContainer6 = document.querySelector(".row-container6");
+
+    for (let col = 0; col < length; col++) {
+        const cell = document.createElement("div");
+        const rows = document.createElement("div");
+        rows.classList.add("grid-row");
+        cell.classList.add("grid-cell");
+        let slicedWord = randomWord[col]
+        cell.innerHTML = slicedWord;
+        rows.innerHTML = slicedWord;
+        cellContainer.appendChild(cell);
+        rowContainer0.appendChild(rows);
+        
+    }
+    rowContainer1.innerHTML = rowContainer0.innerHTML
+    rowContainer2.innerHTML = rowContainer1.innerHTML
+    rowContainer3.innerHTML = rowContainer2.innerHTML
+    rowContainer4.innerHTML = rowContainer3.innerHTML
+    rowContainer5.innerHTML = rowContainer4.innerHTML
+    rowContainer6.innerHTML = rowContainer5.innerHTML
+}
+
+gotItButton.addEventListener("click", gotFunction); // debugging
+=======
 
 }
 
@@ -61,4 +105,5 @@ const createGrid = function (wordLength) {
 }
 
 gotItButton.addEventListener("click", gotFunction);
+>>>>>>> main
 newGameButton.addEventListener("click", newGame);
