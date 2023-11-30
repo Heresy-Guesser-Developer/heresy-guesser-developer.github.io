@@ -58,18 +58,18 @@ const createGrid = function (length) {
         rows.classList.add("grid-row");
         cell.classList.add("grid-cell");
         let slicedWord = randomWord[col]
-        cell.textContent = slicedWord;
-        rows.textContent = slicedWord;
+        cell.innerHTML = slicedWord;
+        rows.innerHTML = slicedWord;
         cellContainer.appendChild(cell);
         rowContainer0.appendChild(rows);
-        rowContainer1.appendChild(rows);
-        rowContainer2.appendChild(rows);
-        rowContainer3.appendChild(rows);
-        rowContainer4.appendChild(rows);
-        rowContainer5.appendChild(rows);
-        rowContainer6.appendChild(rows);
         
     }
+    rowContainer1.innerHTML = rowContainer0.innerHTML
+    rowContainer2.innerHTML = rowContainer1.innerHTML
+    rowContainer3.innerHTML = rowContainer2.innerHTML
+    rowContainer4.innerHTML = rowContainer3.innerHTML
+    rowContainer5.innerHTML = rowContainer4.innerHTML
+    rowContainer6.innerHTML = rowContainer5.innerHTML
 }
 
 gotItButton.addEventListener("click", gotFunction); // debugging

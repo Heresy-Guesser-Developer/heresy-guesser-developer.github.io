@@ -76,6 +76,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    left: 55em;
+    bottom: -10em;
 }
 
 .grid-cell {
