@@ -9,7 +9,7 @@
 
 - Tutte le lettere sbagliate saranno evidenziate di grigio e non potranno piu essere inserite 
 
-- la griglia deve essere 6x5
+- la griglia deve essere lunga in base alla parola
 */
 
 
@@ -17,6 +17,9 @@
 // variables //
 const gotItButton = document.querySelector(".got-it-button");
 const tutorialMessage = document.querySelector(".tutorial-message");
+const newGameButton = document.querySelector(".new-game");
+let arrayWords = ["maiale", "bastardo", "lurido", "ebreo", "maledetto", "cane", "boia"];
+let randomWord;
 
 //Functions //
 
@@ -28,4 +31,46 @@ const gotFunction = function () {
 }
 
 
-gotItButton.addEventListener("click", gotFunction);
+const newGame = function () {
+    const randomIndex = Math.floor((Math.random() * arrayWords.length));
+    randomWord = arrayWords[randomIndex]
+    console.log(randomWord);
+    createGrid(randomWord.length);
+    return randomWord
+
+
+}
+
+const createGrid = function (length) {
+    const gridContainer = document.getElementById("grid-container");
+    const cellContainer = document.querySelector(".cell-container");
+    const rowContainer0 = document.querySelector(".row-container0");
+    const rowContainer1 = document.querySelector(".row-container1");
+    const rowContainer2 = document.querySelector(".row-container2");
+    const rowContainer3 = document.querySelector(".row-container3");
+    const rowContainer4 = document.querySelector(".row-container4");
+    const rowContainer5 = document.querySelector(".row-container5");
+    const rowContainer6 = document.querySelector(".row-container6");
+
+    for (let col = 0; col < length; col++) {
+        const cell = document.createElement("div");
+        const rows = document.createElement("div");
+        rows.classList.add("grid-row");
+        cell.classList.add("grid-cell");
+        let slicedWord = randomWord[col]
+        cell.textContent = slicedWord;
+        rows.textContent = slicedWord;
+        cellContainer.appendChild(cell);
+        rowContainer0.appendChild(rows);
+        rowContainer1.appendChild(rows);
+        rowContainer2.appendChild(rows);
+        rowContainer3.appendChild(rows);
+        rowContainer4.appendChild(rows);
+        rowContainer5.appendChild(rows);
+        rowContainer6.appendChild(rows);
+        
+    }
+}
+
+gotItButton.addEventListener("click", gotFunction); // debugging
+newGameButton.addEventListener("click", newGame);
