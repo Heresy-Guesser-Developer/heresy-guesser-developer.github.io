@@ -76,7 +76,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    left: 55em;
+    left: 50em;
     bottom: -10em;
 }
 
@@ -116,3 +116,4 @@ body {
 .grid-cell.word {
     background-color: lightblue;
 }
+
