@@ -48,9 +48,9 @@ const newGame = function () {
     console.log(randomWord);
     createGrid(randomWord.length);
     return randomWord
-
-
 }
+
+
 
 const createGrid = function (length) {
 
